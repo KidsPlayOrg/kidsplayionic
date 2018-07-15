@@ -21,7 +21,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       const unsubscribe = firebase.auth().onAuthStateChanged(user =>{
-        if(user){
+        if(!user){
           this.rootPage = 'LoginPage';
           unsubscribe();
         }else{

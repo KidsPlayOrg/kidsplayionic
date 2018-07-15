@@ -37,7 +37,7 @@ public authProvider:AuthProvider, formBuilder: FormBuilder) {
     this.navCtrl.push('RegisterPage');
   }
 
-  goToResetpassword():void{
+  goToResetPassword():void{
     this.navCtrl.push('ResetPasswordPage');
   }
 
