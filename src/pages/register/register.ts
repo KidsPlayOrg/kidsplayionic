@@ -4,7 +4,7 @@ import { IonicPage, NavController, Alert, AlertController, Loading, LoadingContr
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { EmailValidator} from '../../validators/email';
-import { HomePage } from '../home/home';
+import { MenuPage } from '../menu/menu';
 
 @IonicPage()
 @Component({
@@ -43,7 +43,7 @@ export class RegisterPage {
 
   		this.auth.register(email, password).then(user =>{
   			this.loading.dismiss().then(()=>{
-  				this.navCtrl.setRoot(HomePage);
+  				this.navCtrl.setRoot(MenuPage);
   			});
   		}, error => {
   			this.loading.dismiss().then(()=>{

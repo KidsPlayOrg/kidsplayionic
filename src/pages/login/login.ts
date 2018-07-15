@@ -3,7 +3,7 @@ import { IonicPage, NavController, Alert, AlertController, Loading, LoadingContr
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {EmailValidator} from '../../validators/email';
 import {AuthProvider} from '../../providers/auth/auth';
-import {HomePage} from '../home/home';
+import {MenuPage} from '../menu/menu';
 
 
 @IonicPage()
@@ -50,7 +50,7 @@ public authProvider:AuthProvider, formBuilder: FormBuilder) {
 
       this.authProvider.login(email, password).then(authData =>{
         this.loading.dismiss().then(()=>{
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.setRoot(MenuPage);
         });
       }, error =>{
         this.loading.dismiss().then(()=>{
