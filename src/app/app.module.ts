@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { MenuPage } from '../pages/menu/menu';
+import { AuthProvider } from '../providers/auth/auth';
 
 //import {config} from 
 import {AngularFireAuthModule} from 'angularfire2/auth';
@@ -15,7 +16,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    MenuPage
   ],
   imports: [
     BrowserModule,
@@ -27,12 +28,13 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    MenuPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {}
